@@ -19,6 +19,9 @@ module light_box() {
   rounded_panel(OUTDER_DIMENSIONS);
 }
 
+function light_box_dimensions() = OUTDER_DIMENSIONS;
+function light_box_height() = HEIGHT;
+
 
 
 module light_cutout() {
