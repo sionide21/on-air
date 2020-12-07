@@ -20,7 +20,7 @@ module light_box() {
 }
 
 function light_box_dimensions() = OUTDER_DIMENSIONS;
-function light_box_height() = HEIGHT;
+function light_box_height() = HEIGHT + FLOOR;
 
 
 
