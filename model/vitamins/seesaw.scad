@@ -11,7 +11,7 @@ module seesaw() {
       cube([40, 5, BOARD_THICKNESS]);
 
       translate([0, 5, 0])
-      cube([40, 25, 15]);
+      cube([40, 25, 13]);
     }
 
     translate([(40 - 36.5) / 2, 2.5])
