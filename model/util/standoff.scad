@@ -32,16 +32,6 @@ module positive_standoff(height, board_size) {
   fillet(width=3.5, r=2);
 }
 
-module standoff_pin(height, board_size) {
-  cylinder(h=0.5, d=3.5);
-  hull() {
-    cylinder(h=height, d=2.3);
-
-    translate([0, 0, height + board_size - 0.1])
-    cylinder(h=0.1, d=1);
-  }
-}
-
 module fillet(width, r) {
   rotate_extrude()
   translate([width/2, 0])
