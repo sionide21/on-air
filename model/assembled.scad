@@ -13,7 +13,7 @@ step(1)
 color("darkgrey")
 case();
 
-translate([5.6, 5.6, 18.6]) {
+translate([5.6, 5.6, 19.6]) {
   step(4)
   color("white")
   light_box();
@@ -30,7 +30,7 @@ translate([5.6, 5.6, 18.6]) {
 
 step(7)
 color("lightgrey")
-translate([0, 0, case_height()])
+translate([0, 0, case_height() + 1])
 cover();
 
 step(2)
