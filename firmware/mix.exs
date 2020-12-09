@@ -36,6 +36,7 @@ defmodule OnAir.MixProject do
       {:ring_logger, "~> 0.8.1"},
       {:toolshed, "~> 0.2.13"},
       {:circuits_i2c, "~> 0.1"},
+      {:on_air_ui, path: "../ui"},
 
       # Dependencies for all targets except :host
       {:nerves_runtime, "~> 0.11.3", targets: @all_targets},
