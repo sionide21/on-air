@@ -4,7 +4,7 @@ A wifi controllable "On Air" sign.
 
 ### Wifi Setup
 
-Connect to a laptop over USB and ssh to `nerves.local`.
+Connect to a laptop over USB and ssh to `on-air.local`.
 
 From a shell, run the following command to set up wifi. It will persist across reboots.
 

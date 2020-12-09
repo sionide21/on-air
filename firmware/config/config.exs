@@ -39,7 +39,7 @@ config :on_air_ui, OnAirUIWeb.Endpoint,
   load_from_system_env: false,
   # Start the server since we're running in a release instead of through `mix`
   server: true,
-  url: [host: "nerves.local", port: 80]
+  url: [host: "on-air.local", port: 80]
 
 
 if Mix.target() != :host do

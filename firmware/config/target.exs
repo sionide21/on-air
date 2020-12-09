@@ -65,10 +65,10 @@ config :mdns_lite,
   # The `host` key specifies what hostnames mdns_lite advertises.  `:hostname`
   # advertises the device's hostname.local. For the official Nerves systems, this
   # is "nerves-<4 digit serial#>.local".  mdns_lite also advertises
-  # "nerves.local" for convenience. If more than one Nerves device is on the
+  # "on-air.local" for convenience. If more than one Nerves device is on the
   # network, delete "nerves" from the list.
 
-  host: [:hostname, "nerves"],
+  host: [:hostname, "on-air"],
   ttl: 120,
 
   # Advertise the following services over mDNS.
@@ -84,6 +84,12 @@ config :mdns_lite,
       protocol: "sftp-ssh",
       transport: "tcp",
       port: 22
+    },
+    %{
+      name: "On-Air Sign",
+      protocol: "http",
+      transport: "tcp",
+      port: 80
     },
     %{
       name: "Erlang Port Mapper Daemon",
