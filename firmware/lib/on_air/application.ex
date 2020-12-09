@@ -34,6 +34,7 @@ defmodule OnAir.Application do
       # Children for all targets except host
       # Starts a worker by calling: OnAir.Worker.start_link(arg)
       {OnAir.LEDs, []},
+      {OnAir.PhoenixAdapter, []},
     ]
   end
 
