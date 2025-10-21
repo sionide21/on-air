@@ -70,6 +70,7 @@ config :mdns_lite,
 
   host: [:hostname, "on-air"],
   ttl: 120,
+  excluded_ifnames: ["lo0", "lo", "ppp0", "wwan0", "usb0"],
 
   # Advertise the following services over mDNS.
   services: [

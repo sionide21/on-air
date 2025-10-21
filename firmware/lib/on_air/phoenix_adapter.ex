@@ -8,11 +8,11 @@ defmodule OnAir.PhoenixAdapter do
   end
 
   def init([]) do
-    :ok = Phoenix.PubSub.subscribe(OnAirUI.PubSub, "color")
+    :ok = OnAirUI.ColorSelection.register()
     {:ok, []}
   end
 
-  def handle_info(%Phoenix.Socket.Broadcast{payload: %{color: color}, event: "change", topic: "color"}, state) do
+  def handle_info({:color_change, color}, state) do
     LEDs.update_colors(fn _, _ -> color end)
     {:noreply, state}
   end

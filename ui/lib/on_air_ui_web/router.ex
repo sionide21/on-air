@@ -20,6 +20,14 @@ defmodule OnAirUIWeb.Router do
     live "/", PageLive, :index
   end
 
+  scope "/", OnAirUIWeb do
+    pipe_through :api
+
+    get "/current", ColorController, :index
+    post "/current", ColorController, :set
+    delete "/current", ColorController, :reset
+  end
+
   # Other scopes may use custom stacks.
   # scope "/api", OnAirUIWeb do
   #   pipe_through :api

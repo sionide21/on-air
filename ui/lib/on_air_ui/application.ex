@@ -11,6 +11,7 @@ defmodule OnAirUI.Application do
       OnAirUIWeb.Telemetry,
       # Start the PubSub system
       {Phoenix.PubSub, name: OnAirUI.PubSub},
+      OnAirUI.ColorSelection,
       # Start the Endpoint (http/https)
       OnAirUIWeb.Endpoint
       # Start a worker by calling: OnAirUI.Worker.start_link(arg)
