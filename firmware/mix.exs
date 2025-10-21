@@ -31,16 +31,16 @@ defmodule OnAir.MixProject do
   defp deps do
     [
       # Dependencies for all targets
-      {:nerves, "~> 1.7.0", runtime: false},
-      {:shoehorn, "~> 0.7.0"},
-      {:ring_logger, "~> 0.8.1"},
-      {:toolshed, "~> 0.2.13"},
+      {:nerves, "~> 1.11.0", runtime: false},
+      {:shoehorn, "~> 0.9.0"},
+      {:ring_logger, "~> 0.11.0"},
+      {:toolshed, "~> 0.4.0"},
       {:circuits_i2c, "~> 0.1"},
       {:on_air_ui, path: "../ui"},
 
       # Dependencies for all targets except :host
-      {:nerves_runtime, "~> 0.11.3", targets: @all_targets},
-      {:nerves_pack, "~> 0.4.0", targets: @all_targets},
+      {:nerves_runtime, "~> 0.13.0", targets: @all_targets},
+      {:nerves_pack, "~> 0.7.0", targets: @all_targets},
 
       # Dependencies for specific targets
       {:nerves_system_rpi0, "~> 1.13", runtime: false, targets: :rpi0}
