@@ -9,6 +9,7 @@ defmodule OnAirUIWeb.PageLive do
     {:ok, assign(socket, color: color)}
   end
 
+  @impl true
   def render(assigns) do
     ~L"""
     <form phx-change="color-change" phx-submit="color-change">
@@ -21,6 +22,7 @@ defmodule OnAirUIWeb.PageLive do
     """
   end
 
+  @impl true
   def handle_event("color-change", %{"color" => "#" <> color}, socket) do
     :ok = ColorSelection.set_hex(color)
     {:noreply, socket}
@@ -31,6 +33,7 @@ defmodule OnAirUIWeb.PageLive do
     {:noreply, assign(socket, color: "000000")}
   end
 
+  @impl true
   def handle_info(%Phoenix.Socket.Broadcast{payload: %{color: color}, event: "change", topic: "color"}, socket) do
     {:noreply, assign(socket, color: color)}
   end

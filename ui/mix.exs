@@ -41,7 +41,8 @@ defmodule OnAirUI.MixProject do
       {:telemetry_metrics, "~> 0.4"},
       {:telemetry_poller, "~> 0.4"},
       {:jason, "~> 1.0"},
-      {:plug_cowboy, "~> 2.0"}
+      {:plug_cowboy, "~> 2.0"},
+      {:esbuild, "~> 0.10.0", only: :dev}
     ]
   end
 
@@ -53,7 +54,8 @@ defmodule OnAirUI.MixProject do
   # See the documentation for `Mix` for more info on aliases.
   defp aliases do
     [
-      setup: ["deps.get", "cmd npm install --prefix assets"]
+      setup: ["deps.get"],
+      "assets.deploy": ["esbuild default --minify", "phx.digest"]
     ]
   end
 end
